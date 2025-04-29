@@ -23,16 +23,13 @@ function getEndpoints(deviceAddress, endpoints)
   // En el código siguiente, se crean dos endpoints. El primero es un sensor de 
   // temperatura, mientras que el segundo es un sensor de dióxido de carbono.
 
-  // endpoints.addEndpoint("1", "Temperature sensor", endpointType.temperatureSensor);
-  // endpoints.addEndpoint("2", "CO2 sensor", endpointType.ppmConcentrationSensor, ppmConcentrationSensorSubType.carbonDioxide);
-  endpoints.addEndpoint("1", "Presión del filtro de Cartucho", endpointType.pressureSensor );
-  endpoints.addEndpoint("2", "Desinfectante(Cloro libre)", endpointType.ppmConcentrationSensor );
-  endpoints.addEndpoint("3", "Desinfectante(Bromo libre)", endpointType.ppmConcentrationSensor );
-  endpoints.addEndpoint("4", "Desinfectante(Dióxido de Cloro)", endpointType.ppmConcentrationSensor );
-//   endpoints.addEndpoint("5", "Temperatura Piscina", endpointType.temperatureSensor);
-//   endpoints.addEndpoint("6", "Temperatura Ducha Vestuarios", endpointType.temperatureSensor);
-  var e = endpoints.addEndpoint("7", "PH", endpointType.genericSensor);
-   e.variableTypeId = 1156;
+    endpoints.addEndpoint("1", "Presión del filtro de Cartucho", endpointType.pressureSensor );
+    endpoints.addEndpoint("2", "Desinfectante(Cloro libre)", endpointType.ppmConcentrationSensor );
+    endpoints.addEndpoint("3", "Desinfectante(Bromo libre)", endpointType.ppmConcentrationSensor );
+    endpoints.addEndpoint("4", "Desinfectante(Dióxido de Cloro)", endpointType.ppmConcentrationSensor );
+
+    var e = endpoints.addEndpoint("7", "PH", endpointType.genericSensor);
+   e.variableTypeId = 1010;
 }
 
 function validateDeviceAddress(address, result)
